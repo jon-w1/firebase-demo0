@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Firebase Demo 0</title>
+    
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+
+    <!-- jQuery -->
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+</head>
+<body>
+
+<script>
+
+var ref = new Firebase("https://<YOUR-FIREBASE-NAME>.firebaseio.com/demo0");
+
+$(document).ready(function(){
+
+ref.on('value', function(snapshot){
+  $('body').append('<p>'+snapshot.val()+'</p>')
+});
+
+});
+
+</script>
+
+
+  <h1> Blank Demo App </h1>
+
+
+
+</body>
